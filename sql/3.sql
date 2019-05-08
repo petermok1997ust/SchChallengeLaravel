@@ -1,3 +1,4 @@
+-- CREATE DATABASE  IF NOT EXISTS `sch` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */;
 USE `sch`;
 -- MySQL dump 10.13  Distrib 8.0.13, for macos10.14 (x86_64)
 --
@@ -22,20 +23,20 @@ USE `sch`;
 
 DROP TABLE IF EXISTS `driver_info`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8 ;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `driver_info` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `first_name` varchar(255) NOT NULL,
-  `last_name` varchar(255) NOT NULL,
-  `phone` varchar(255) NOT NULL,
-  `identity` varchar(255) NOT NULL,
-  `car_liscene` varchar(255) NOT NULL,
-  `country_of_liscene` varchar(255) NOT NULL,
-  `company` varchar(255) NOT NULL,
+  `first_name` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `last_name` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `phone` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `identity` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `car_liscene` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `country_of_liscene` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `company` varchar(255) COLLATE utf8_general_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -53,22 +54,22 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `good_storage`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8 ;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `good_storage` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `driver_id` varchar(255) NOT NULL,
-  `description` varchar(255) NOT NULL,
-  `status` varchar(255) NOT NULL,
-  `region_id` varchar(255) NOT NULL,
-  `truck_id` varchar(255) DEFAULT NULL,
-  `weight` varchar(255) DEFAULT NULL,
-  `width` varchar(255) DEFAULT NULL,
-  `height` varchar(255) DEFAULT NULL,
-  `length` varchar(255) DEFAULT NULL,
+  `driver_id` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `description` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `status` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `region_id` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `truck_id` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `weight` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `width` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `height` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `length` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -86,13 +87,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `migrations`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8 ;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `migrations` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `migration` varchar(255) NOT NULL,
+  `migration` varchar(255) COLLATE utf8_general_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
