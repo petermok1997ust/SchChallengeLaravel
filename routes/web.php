@@ -22,8 +22,6 @@ Route::get('/driver', "DriverController@getDriver")->name('driver');
 Route::get('/driver/delete', "DriverController@deleteDriver")->name('delete_driver');
 
 Route::get('/php_info', function() {
-   return response()->json([
-    'stuff' => phpinfo()
-   ]);
+   return phpinfo();
 })
 // Route::get('/driver/register', "DriverController@registerDriver");
