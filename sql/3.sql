@@ -26,13 +26,13 @@ DROP TABLE IF EXISTS `driver_info`;
  SET character_set_client = utf8 ;
 CREATE TABLE `driver_info` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `first_name` varchar(255) COLLATE utf8 NOT NULL,
-  `last_name` varchar(255) COLLATE utf8 NOT NULL,
-  `phone` varchar(255) COLLATE utf8 NOT NULL,
-  `identity` varchar(255) COLLATE utf8 NOT NULL,
-  `car_liscene` varchar(255) COLLATE utf8 NOT NULL,
-  `country_of_liscene` varchar(255) COLLATE utf8 NOT NULL,
-  `company` varchar(255) COLLATE utf8 NOT NULL,
+  `first_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
+  `phone` varchar(255) NOT NULL,
+  `identity` varchar(255) NOT NULL,
+  `car_liscene` varchar(255) NOT NULL,
+  `country_of_liscene` varchar(255) NOT NULL,
+  `company` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -57,15 +57,15 @@ DROP TABLE IF EXISTS `good_storage`;
  SET character_set_client = utf8 ;
 CREATE TABLE `good_storage` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `driver_id` varchar(255) COLLATE utf8 NOT NULL,
-  `description` varchar(255) COLLATE utf8 NOT NULL,
-  `status` varchar(255) COLLATE utf8 NOT NULL,
-  `region_id` varchar(255) COLLATE utf8 NOT NULL,
-  `truck_id` varchar(255) COLLATE utf8 DEFAULT NULL,
-  `weight` varchar(255) COLLATE utf8 DEFAULT NULL,
-  `width` varchar(255) COLLATE utf8 DEFAULT NULL,
-  `height` varchar(255) COLLATE utf8 DEFAULT NULL,
-  `length` varchar(255) COLLATE utf8 DEFAULT NULL,
+  `driver_id` varchar(255) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `status` varchar(255) NOT NULL,
+  `region_id` varchar(255) NOT NULL,
+  `truck_id` varchar(255) DEFAULT NULL,
+  `weight` varchar(255) DEFAULT NULL,
+  `width` varchar(255) DEFAULT NULL,
+  `height` varchar(255) DEFAULT NULL,
+  `length` varchar(255) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -90,7 +90,7 @@ DROP TABLE IF EXISTS `migrations`;
  SET character_set_client = utf8 ;
 CREATE TABLE `migrations` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `migration` varchar(255) COLLATE utf8 NOT NULL,
+  `migration` varchar(255) NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8;
