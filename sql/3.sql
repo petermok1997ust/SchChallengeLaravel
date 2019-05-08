@@ -26,17 +26,17 @@ DROP TABLE IF EXISTS `driver_info`;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `driver_info` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `first_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `last_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `identity` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `car_liscene` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `country_of_liscene` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `company` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `first_name` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `last_name` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `phone` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `identity` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `car_liscene` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `country_of_liscene` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `company` varchar(255) COLLATE utf8_general_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -57,19 +57,19 @@ DROP TABLE IF EXISTS `good_storage`;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `good_storage` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `driver_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `region_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `truck_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `weight` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `width` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `height` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `length` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `driver_id` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `description` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `status` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `region_id` varchar(255) COLLATE utf8_general_ci NOT NULL,
+  `truck_id` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `weight` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `width` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `height` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `length` varchar(255) COLLATE utf8_general_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
