@@ -1,4 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `sch` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_0900_ai_ci */;
 USE `sch`;
 -- MySQL dump 10.13  Distrib 8.0.13, for macos10.14 (x86_64)
 --
