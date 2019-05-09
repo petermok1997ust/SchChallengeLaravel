@@ -79,6 +79,7 @@
     <table class="table">
       <thead>
         <tr>
+          <th scope="col">Driver ID</th>
           <th scope="col">Last Name</th>
           <th scope="col">First Name</th>
           <th scope="col">ID No.</th>
@@ -95,6 +96,7 @@
 
         @foreach($drivers as $driver)
         <tr>
+          <td>{{$driver['id']}}</td>
           <td>{{$driver['last_name']}}</td>
           <td>{{$driver['first_name']}}</td>
           <td>{{$driver['identity']}}</td>

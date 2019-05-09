@@ -21,7 +21,7 @@ Route::get('/driver/register', function () {
 Route::get('/driver', "DriverController@getDriver")->name('driver');
 Route::get('/driver/delete', "DriverController@deleteDriver")->name('delete_driver');
 
-Route::get('/php_info', function() {
-   phpinfo();
-});
+// Route::get('/php_info', function() {
+//    phpinfo();
+// });
 // Route::get('/driver/register', "DriverController@registerDriver");
